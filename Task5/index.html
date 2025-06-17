@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container" id="container">
+    <h1>Weather App</h1>
+    <div class="search-box">
+      <input type="text" id="locationInput" placeholder="Enter city name" />
+      <div class="btn-group">
+        <button onclick="getWeatherByCity()">Search</button>
+        <button onclick="getWeatherByLocation()">Use My Location</button>
+      </div>
+    </div>
+    <div id="weatherResult" class="weather-result hidden">
+      <div class="weather-card">
+        <div class="weather-icon">
+          <img id="weatherIcon" src="" alt="Weather Icon" />
+        </div>
+        <div class="weather-info">
+          <h2 id="cityName"></h2>
+          <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+          <p><strong>Condition:</strong> <span id="condition"></span></p>
+          <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+          <p><strong>Wind Speed:</strong> <span id="wind"></span> m/s</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
